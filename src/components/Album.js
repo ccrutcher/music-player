@@ -12,7 +12,8 @@ class Album extends Component {
   this.state = {
     album: album,
     currentSong: album.songs[0],
-    isPlaying: false
+    isPlaying: false,
+    isHovering: false
   };
 
   this.audioElement = document.createElement('audio');
@@ -38,10 +39,35 @@ class Album extends Component {
     const isSameSong = this.state.currentSong === song;
     if (this.state.isPlaying && isSameSong){
       this.pause();
-    } else {
+    }
+    else {
       if (!isSameSong) { this.setSong(song); }
       this.play();
     }
+  }
+
+  changeButton(song, index) {
+    const isSameSong = this.state.currentSong === song;
+    if (!this.state.isPlaying && isSameSong) {
+      return <span className="ion-play"></span>
+    }
+    if (this.state.isPlaying && isSameSong) {
+      return <span className="ion-pause"></span>
+    }
+    if (this.state.isHovering !== song){
+      return <span>{index+1}</span>
+    }
+    else{
+      return <span className="ion-play"></span>
+    }
+    }
+
+  handleButtonHover(song) {
+      this.setState({ isHovering: song });
+    }
+
+  handleButtonHoverOff(song) {
+    this.setState({ isHovering: false });
   }
 
   render() {
@@ -62,18 +88,17 @@ class Album extends Component {
             <col id="song-duration-column" />
           </colgroup>
           <tbody>
-            <tr>
-            <th>Track #</th>
-            <th>Track Title</th>
-            <th>Duration</th>
-            </tr>
             {
               this.state.album.songs.map( (song, index ) =>
-                <tr>
-                  <td>{index + 1}</td>
-                  <td onClick={() => this.handleSongClick(song)}>{song.title}</td>
+                  <tr className="song" key={index}
+                  onClick={() => this.handleSongClick(song)}
+                  onMouseEnter={() => this.handleButtonHover(song)}
+                  onMouseLeave={() => this.handleButtonHoverOff(song)}>
+
+                  <td>{this.changeButton(song, index)}</td>
+                  <td>{song.title}</td>
                   <td>{song.duration}</td>
-                </tr>
+                  </tr>
               )
             }
           </tbody>
