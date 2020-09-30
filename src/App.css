@@ -26,3 +26,26 @@ body {
 .top-buffer {
   margin-top: 20px;
 }
+
+.library {
+  width: 100%;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.album-container {
+  background-color: rgb(54, 54, 54);
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  box-shadow: 2px 2px 2px rgb(54, 54, 54);
+}
+
+.album-image {
+  width: 300px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
