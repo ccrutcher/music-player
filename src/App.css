@@ -1,10 +1,11 @@
-.App {
-  text-align: center;
+html,
+body {
+  background-image: linear-gradient(120deg, #3498db, #8e44ad);
+  min-height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App {
+  text-align: center;
 }
 
 .App-header {
@@ -22,7 +23,6 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.top-buffer {
+  margin-top: 20px;
 }
