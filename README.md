@@ -1,5 +1,12 @@
-Music Player App - My Tunes
+This is a music player made using ReactJS
 
-This is a music player made using React, JavaScript, HTML5, and CSS.
+From the landing page, using React Router, users may go to the library. Once an album has been selected, users can click on any song to begin playing the song, then clicking again will pause it. 
 
-Users start on the landing page where a welcome message is displayed. From here, using React Router, users may go to the library. The library currently contains two fictitious albums that contain the same five public domain mp3 files. Once an album has been selected, users can click on any song to begin playing the song, then clicking again will pause it. Users may also use the player bar to navigate through the songs. Beneath the player bar is a volume slider.
+![landing](https://user-images.githubusercontent.com/35352111/111009126-5ddc2000-8358-11eb-8c1b-5b4c8664e14d.png)
+
+![library](https://user-images.githubusercontent.com/35352111/111009134-603e7a00-8358-11eb-8976-916613c863cc.png)
+
+![player](https://user-images.githubusercontent.com/35352111/111009136-62a0d400-8358-11eb-9c39-fc0d8a594c64.png)
+
+
+
