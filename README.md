@@ -1,4 +1,4 @@
-This is a music player made using React, JavaScript, HTML, CSS, and Bootstrap.
+This is a music player made using ReactJS
 
 From the landing page, using React Router, users may go to the library. Once an album has been selected, users can click on any song to begin playing the song, then clicking again will pause it. 
 
